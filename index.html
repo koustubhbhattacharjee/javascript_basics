@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gfh4xtq.css">
+</head>
+<body>
+  <!-- <h2 id="title">
+    Welcome to decode!
+  </h2>
+  <ul id="mylist">
+    <li>Apple</li>
+  </ul> -->
+  <!-- <h2 id="title">Document Fragment</h2>
+  <p id="myPara">
+    Yeah mate
+  </p>
+  <div data-name="domenic" data-started-coding-at="15" id="myDiv">Sample Text</div>
+  <ul id="myList">
+    <li id="pears">Pears</li>
+    <li id="apples">Apples</li>
+    <li id="banana">Bananas</li>
+  </ul> -->
+<!--  
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div> -->
+    <!-- <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item-1"></div>
+        <div class="flexbox-item flexbox-item-2"></div>
+        <div class="flexbox-item flexbox-item-3"></div>
+    </div> -->
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">
+          <div class="text-container">
+            <p>grid-item-1</p>
+          </div>
+          <a id="imageLink" class=href="#">
+              <img alt="" id="unsplashImage"/>
+          </a>
+
+        </div>
+        <p class="imageDetails"> Photo by 
+          <a id="creator" href="#">Name</a>
+        </p>
+        <div class="grid-item grid-item-2">grid-item-2</div>
+        <div class="grid-item grid-item-3">grid-item-3</div>
+      
+        <!-- <div class="grid-item grid-item-4">grid-item-3</div> -->
+      </div>
+      <script>
+        let clientID=`K1gmsNKR_78Y10d7mY9m0a-mr_AzT0WnAW1exuN97vU`
+        let endpoint=`https://api.unsplash.com/photos/random/?client_id=${clientID}`
+        
+        let image=document.querySelector('#unsplashImage')
+        let imageLink= document.querySelector('#imageLink')
+        let creator=document.querySelector('#creator')
+
+        fetch(endpoint)
+        .then((res)=>{
+          return res.json()
+        })
+        .then((jsonData)=>{
+          image.src=jsonData.urls.regular
+        }
+        )
+
+      </script>
+</body>
+<!-- <script src="animationWithJavascript.js"></script> -->
+</html>
